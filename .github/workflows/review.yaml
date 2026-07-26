@@ -13,11 +13,11 @@ jobs:
     runs-on: ubuntu-latest
     steps:
     - name: Check Out Repository
-      uses: actions/checkout@11bd71901bbe5b1630ceea73d27597364c9af683
+      uses: actions/checkout@3d3c42e5aac5ba805825da76410c181273ba90b1
       with:
         fetch-depth: 0
     - name: Install Nix
-      uses: NixOS/nix-installer-action@6b8548fe06acfb0155a50ab5d561accb215764cc
+      uses: NixOS/nix-installer-action@62c1943b776c509394b550f3f983adc14e9212d6
       with:
         extra-conf: |
           experimental-features = nix-command flakes
@@ -44,13 +44,15 @@ jobs:
     runs-on: ${{ matrix.os }}
     steps:
     - name: Check Out Repository
-      uses: actions/checkout@11bd71901bbe5b1630ceea73d27597364c9af683
+      uses: actions/checkout@3d3c42e5aac5ba805825da76410c181273ba90b1
     - name: Set Up Go
-      uses: actions/setup-go@4a3601121dd01d1626a1e23e37211e3254c1c06c
+      uses: actions/setup-go@b7ad1dad31e06c5925ef5d2fc7ad053ef454303e
       with:
         cache: true
         go-version: 1.26.2
     - name: Test
       run: go test work -coverprofile=coverage.txt -covermode=atomic
-    - name: Codecov Coverage
-      uses: codecov/codecov-action@671740ac38dd9b0130fbe1cec585b89eea48d3de
+    - name: Codecov
+      uses: codecov/codecov-action@fb8b3582c8e4def4969c97caa2f19720cb33a72f
+      with:
+        files: ./coverage.txt

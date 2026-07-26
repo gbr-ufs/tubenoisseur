@@ -21,20 +21,20 @@ jobs:
     runs-on: ubuntu-latest
     steps:
     - name: Check Out Repository
-      uses: actions/checkout@11bd71901bbe5b1630ceea73d27597364c9af683
+      uses: actions/checkout@3d3c42e5aac5ba805825da76410c181273ba90b1
       with:
         fetch-depth: 0
     - name: Install Nix
-      uses: NixOS/nix-installer-action@6b8548fe06acfb0155a50ab5d561accb215764cc
+      uses: NixOS/nix-installer-action@62c1943b776c509394b550f3f983adc14e9212d6
       with:
         extra-conf: |
           experimental-features = nix-command flakes
     - name: Set Up QEMU
-      uses: docker/setup-qemu-action@ce360397dd3f832beb865e1373c09c0e9f86d70a
+      uses: docker/setup-qemu-action@96fe6ef7f33517b61c61be40b68a1882f3264fb8
     - name: Set Up Docker Buildx
-      uses: docker/setup-buildx-action@4d04d5d9486b7bd6fa91e7baf45bbb4f8b9deedd
+      uses: docker/setup-buildx-action@bb05f3f5519dd87d3ba754cc423b652a5edd6d2c
     - name: Docker
-      uses: docker/login-action@4907a6ddec9925e35a0a9e82d7399ccc52663121
+      uses: docker/login-action@abd2ef45e78c5afb21d64d4ca52ee8550d9572c7
       with:
         registry: ghcr.io
         password: ${{ secrets.GITHUB_TOKEN }}
