@@ -21,9 +21,10 @@ archives:
       {{- if .Arm}}v{{.Arm}}{{end}}
 aurs:
   - description: "YouTuber Reference Scraper."
+    git_url: "ssh://aur@aur.archlinux.org/tubenoisseur-bin.git"
     homepage: https://gbr-ufs.github.io/tubenoisseur/
     license: GPL
-    private_key: "{{.Env.AUR_KEY}}"
+    private_key: "{{ .Env.AUR_KEY }}"
 before:
   hooks:
     - sh -c 'mkdir -p ~/.ssh'
@@ -95,8 +96,7 @@ nfpms:
     license: GPL
     maintainer: Gabriel Santos de Souza <gabriel.santosdesouza@dcomp.ufs.br>
 nix:
-  - formatter: nixfmt
-    repository:
+  - repository:
       name: nur
       owner: gbr-ufs
       token: "{{ .Env.NUR_TOKEN }}"
@@ -113,6 +113,7 @@ scoops:
       token: "{{ .Env.SCOOP_TOKEN }}"
 winget:
   - installation_notes: https://gbr-ufs.github.io/tubenoisseur/getting_started
+    license: GPL
     license_url: https://gbr-ufs.github.io/tubenoisseur/references/license
     publisher: Gabriel Santos de Souza <gabriel.santosdesouza@dcomp.ufs.br>
     release_notes_url: "https://github.com/gbr-ufs/tubenoisseur/releases/tag/{{.Tag}}"

@@ -44,6 +44,7 @@ jobs:
         nix develop ./nix --command \
         goreleaser release
       env:
+        AUR_KEY: ${{ secrets.AUR_KEY }}
         GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
         HOMEBREW_CASK_TOKEN: ${{ secrets.HOMEBREW_CASK_TOKEN }}
         NUR_TOKEN: ${{ secrets.NUR_TOKEN }}
