@@ -52,7 +52,7 @@ jobs:
       if: ${{ steps.cache.outputs.cache-hit != 'true' }}
       uses: actions/setup-go@4a3601121dd01d1626a1e23e37211e3254c1c06c # Remember to update this!
       with:
-        go-version: 1.26.2
+        go-version: 1.26.5
     - name: Install Tubenoisseur
       if: ${{ steps.cache.outputs.cache-hit != 'true' }}
       run: go install github.com/gbr-ufs/tubenoisseur@v0.0.0-20260505022416-8a1b3637c278 # TODO (ME): CHANGE IT TO AN ACTUAL RELEASE!

@@ -4,12 +4,13 @@
 
 module github.com/gbr-ufs/tubenoisseur
 
-go 1.26.2
+go 1.26.5
 
 require github.com/spf13/cobra v1.10.2
 
 require (
 	github.com/charmbracelet/log v1.0.0
+	github.com/gbr-ufs/tubenoisseur/scraping v0.0.0-20260726214715-8dfa15450c98
 	github.com/knadh/koanf/parsers/toml v0.1.0
 	github.com/knadh/koanf/providers/confmap v1.0.0
 	github.com/knadh/koanf/providers/env v1.1.0
@@ -44,4 +45,5 @@ require (
 	github.com/xo/terminfo v0.0.0-20220910002029-abceb7e1c41e // indirect
 	golang.org/x/exp v0.0.0-20260718201538-764159d718ef // indirect
 	golang.org/x/sys v0.47.0 // indirect
+	mvdan.cc/xurls/v2 v2.6.0 // indirect
 )
