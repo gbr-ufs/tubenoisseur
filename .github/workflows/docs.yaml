@@ -1,0 +1,49 @@
+name: Documentation
+on:
+  push:
+    branches:
+      - main
+  workflow_dispatch:
+
+permissions:
+  contents: read
+  pages: write
+  id-token: write
+
+jobs:
+  docs:
+    environment:
+      name: github-pages
+      url: ${{ steps.deployment.outputs.page_url }}
+    runs-on: ubuntu-latest
+    steps:
+      - name: Check Out Repository
+        uses: actions/checkout@11bd71901bbe5b1630ceea73d27597364c9af683
+      - name: Install Nix
+        uses: NixOS/nix-installer-action@6b8548fe06acfb0155a50ab5d561accb215764cc
+        with:
+          extra-conf: |
+            experimental-features = nix-command flakes
+      - name: Configure GitHub Pages
+        id: pages
+        uses: actions/configure-pages@983d7736d9b0ae728b81ab479565c72886d7745b
+      - name: Install Dependencies
+        run: |
+          nix develop ../nix --command \
+          hugo mod  \
+          get \
+          -u
+        working-directory: ./docs
+      - name: Build
+        run: |
+          nix develop ./nix --command \
+          hugo build \
+          --baseURL ${{ steps.pages.outputs.base_url }} \
+          --gc \
+          --minify \
+          --source docs
+      - uses: actions/upload-pages-artifact@7b1f4a764d45c48632c6b24a0339c27f5614fb0b
+        with:
+          path: docs/public
+      - uses: actions/deploy-pages@d6db90164ac5ed86f2b6aed7e0febac5b3c0c03e
+        id: deployment

@@ -1,0 +1,17 @@
+{
+  "name": "tubenoisseur",
+  "image": "mcr.microsoft.com/devcontainers/go:2.1.1-bookworm@sha256:4f1aee525ba0de00f70f676aac0b2179ad19a76a4c9f27a77c3cfb4b11c7b10a",
+  "customizations": {
+    "vscode": {
+      "settings": {
+        "editor.formatOnSave": true,
+        "go.formatTool": "goimports",
+        "go.lintTool": "golangci-lint",
+        "go.lintOnSave": "package"
+      },
+      "extensions": [
+        "golang.go"
+      ]
+    }
+  }
+}

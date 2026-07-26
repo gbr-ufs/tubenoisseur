@@ -1,0 +1,36 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<feed xmlns:yt="http://www.youtube.com/xml/schemas/2015" xmlns:media="http://search.yahoo.com/mrss/" xmlns="http://www.w3.org/2005/Atom">
+ <link rel="self" href="http://www.youtube.com/feeds/videos.xml?channel_id=UC9H0HzpKf5JlazkADWnW1Jw"/>
+ <id>yt:channel:9H0HzpKf5JlazkADWnW1Jw</id>
+ <yt:channelId>9H0HzpKf5JlazkADWnW1Jw</yt:channelId>
+ <title>bashbunni</title>
+ <link rel="alternate" href="https://www.youtube.com/channel/UC9H0HzpKf5JlazkADWnW1Jw"/>
+ <author>
+  <name>bashbunni</name>
+  <uri>https://www.youtube.com/channel/UC9H0HzpKf5JlazkADWnW1Jw</uri>
+ </author>
+ <published>2021-02-06T23:31:09+00:00</published>
+ <entry>
+  <id>yt:video:E0tbuDmIXxg</id>
+  <yt:videoId>E0tbuDmIXxg</yt:videoId>
+  <yt:channelId>UC9H0HzpKf5JlazkADWnW1Jw</yt:channelId>
+  <title>The BEST intro to a new programming language (interactive, in-IDE) #learnprogramming #rustlang #bash</title>
+  <link rel="alternate" href="https://www.youtube.com/shorts/E0tbuDmIXxg"/>
+  <author>
+   <name>bashbunni</name>
+   <uri>https://www.youtube.com/channel/UC9H0HzpKf5JlazkADWnW1Jw</uri>
+  </author>
+  <published>2026-05-03T13:01:56+00:00</published>
+  <updated>2026-05-03T13:10:07+00:00</updated>
+  <media:group>
+   <media:title>The BEST intro to a new programming language (interactive, in-IDE) #learnprogramming #rustlang #bash</media:title>
+   <media:content url="https://www.youtube.com/v/E0tbuDmIXxg?version=3" type="application/x-shockwave-flash" width="640" height="390"/>
+   <media:thumbnail url="https://i2.ytimg.com/vi/E0tbuDmIXxg/hqdefault.jpg" width="480" height="360"/>
+   <media:description></media:description>
+   <media:community>
+    <media:starRating count="432" average="5.00" min="1" max="5"/>
+    <media:statistics views="5944"/>
+   </media:community>
+  </media:group>
+ </entry>
+</feed>

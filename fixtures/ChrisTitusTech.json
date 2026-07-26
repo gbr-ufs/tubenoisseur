@@ -1,0 +1,20 @@
+{
+  "channelHandle": "ChrisTitusTech",
+  "domainCounts": {},
+  "excludedDomains": [
+    "www.cttstore.com",
+    "www.patreon.com",
+    "www.twitch.tv",
+    "christitus.com"
+  ],
+  "lastVideoID": "7VTWbFqySxg",
+  "videos": [
+    {
+      "description": "",
+      "ID": "7VTWbFqySxg",
+      "published": "2026-05-02T11:15:00+00:00",
+      "title": "I Ditched Chrome for This $60 Browser, but without paying",
+      "urls": []
+    }
+  ]
+}

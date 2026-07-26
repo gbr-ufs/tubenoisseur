@@ -1,0 +1,27 @@
+🧱 Build software that lasts. Join the Software Design Mastery waiting list → https://arjan.codes/mastery.
+
+Your clean API works… until integrations start piling up.
+
+One system needs an extra ID, another needs a reference, and suddenly your schema turns into a mess. In this video, I show a cleaner way to handle this using a flexible custom_data design that keeps your API structured without turning it into a junk drawer.
+
+🔥 GitHub Repository: https://git.arjan.codes/2026/apidata.
+
+🎓 ArjanCodes Courses: https://www.arjancodes.com/courses.
+
+💬 Join my Discord server: https://discord.arjan.codes.
+
+⌨️ Keyboard I’m using: https://amzn.to/49YM97v.
+
+🔖 Chapters:
+0:00 Intro
+1:05 The Starting Point
+2:35 The Real Problem
+4:11 The Design We Want
+4:50 Where the Logic Should Live
+5:30 The Reusable Base Model
+8:58 The API Schemas
+10:50 Why This Pattern Works Well
+11:17 When To (Not) Use It
+12:12 Final Thoughts
+
+#arjancodes #softwaredesign #python

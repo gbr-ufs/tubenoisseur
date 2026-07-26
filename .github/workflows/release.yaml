@@ -1,0 +1,55 @@
+# SPDX-FileCopyrightText: 2026 Gabriel Santos de Souza <gabriel.santosdesouza@dcomp.ufs.br>
+#
+# SPDX-License-Identifier: GPL-3.0-or-later
+
+name: Release
+
+on:
+  push:
+    tags:
+      - "*"
+  workflow_dispatch:
+
+permissions:
+  attestations: write
+  contents: write
+  id-token: write
+  packages: write
+
+jobs:
+  release:
+    runs-on: ubuntu-latest
+    steps:
+    - name: Check Out Repository
+      uses: actions/checkout@11bd71901bbe5b1630ceea73d27597364c9af683
+      with:
+        fetch-depth: 0
+    - name: Install Nix
+      uses: NixOS/nix-installer-action@6b8548fe06acfb0155a50ab5d561accb215764cc
+      with:
+        extra-conf: |
+          experimental-features = nix-command flakes
+    - name: Set Up QEMU
+      uses: docker/setup-qemu-action@ce360397dd3f832beb865e1373c09c0e9f86d70a
+    - name: Set Up Docker Buildx
+      uses: docker/setup-buildx-action@4d04d5d9486b7bd6fa91e7baf45bbb4f8b9deedd
+    - name: Docker
+      uses: docker/login-action@4907a6ddec9925e35a0a9e82d7399ccc52663121
+      with:
+        registry: ghcr.io
+        password: ${{ secrets.GITHUB_TOKEN }}
+        username: ${{ github.repository_owner }}
+    - name: GoReleaser
+      run: |
+        nix develop ./nix --command \
+        # Goreleaser doesn't really interact well with "~" or environment
+        # variables.
+        mkdir -p ~/.ssh
+        ssh-keyscan aur.archlinux.org >> ~/.ssh/known_hosts
+        goreleaser release
+      env:
+        GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+        HOMEBREW_CASK_TOKEN: ${{ secrets.HOMEBREW_CASK_TOKEN }}
+        NUR_TOKEN: ${{ secrets.NUR_TOKEN }}
+        SCOOP_TOKEN: ${{ secrets.SCOOP_TOKEN }}
+        WINGET_TOKEN: ${{ secrets.WINGET_TOKEN }}

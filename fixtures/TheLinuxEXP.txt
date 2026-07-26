@@ -1,0 +1,82 @@
+Head to https://squarespace.com/thelinuxexperiment to save 10% off your first purchase of a website or domain using code THELINUXEXPERIMENT
+
+Grab a brand new laptop or desktop running Linux: https://www.tuxedocomputers.com/en#
+
+
+👏 SUPPORT THE CHANNEL:
+Get access to:
+- a Daily Linux News show
+- a weekly patroncast for more thoughts
+- your name in the credits
+
+YouTube: https://www.youtube.com/@TheLinuxEXP/join
+Patreon: https://www.patreon.com/thelinuxexperiment
+
+Or, you can donate whatever you want:
+https://paypal.me/thelinuxexp
+Liberapay: https://liberapay.com/TheLinuxExperiment/
+
+👕 GET TLE MERCH
+Support the channel AND get cool new gear: https://the-linux-experiment.creator-spring.com/
+
+Timestamps:
+
+00:00 Intro
+00:30 Sponsor: SquareSpace
+02:09 Ubuntu's infrastructure is under attack
+03:59 New nasty vulnerability for all Linux distros
+05:36 Framework Pro's Linux version outsells the Windows one
+06:50 Ubuntu LTS beats Windows 11 in benchmarks, again
+08:23 Ubuntu will add AI features in the future
+10:34 Ubuntu clarifies their inclusion of AI features
+12:46 EU app for age verification is structurally flawed
+15:26 Steam Controller announced at 99USD
+17:43 Anthropic now funds Blender
+21:00 Fedora 44 released
+22:44 New campaign fighting back against Android lockdown
+26:20 Sponsor: Tuxedo Computers
+
+Links:
+
+Ubuntu's infrastructure is under attack
+https://thecybersecguru.com/news/massive-attack-ubuntu-canonical-313-team-extortion/
+
+New nasty vulnerability for all Linux distros
+https://nerds.xyz/2026/04/copy-fail-linux-root-exploit/
+https://xint.io/blog/copy-fail-linux-distributions
+
+Framework Pro's Linux version outsells the Windows one
+https://www.pcworld.com/article/3123900/framework-new-linux-laptop-is-selling-faster-than-its-windows-one.html
+
+Ubuntu LTS beats Windows 11 in benchmarks, again
+https://www.phoronix.com/review/ubuntu-2604-windows-11/7
+
+Ubuntu will add AI features in the future
+https://discourse.ubuntu.com/t/the-future-of-ai-in-ubuntu/81130
+
+Ubuntu clarifies their inclusion of AI features
+https://discourse.ubuntu.com/t/the-future-of-ai-in-ubuntu/81130/41
+
+EU app for age verification is structurally flawed
+https://www.techradar.com/vpn/vpn-privacy-security/the-eus-age-verification-app-has-a-privacy-problem-and-it-may-be-more-than-just-a-bug-in-an-app
+https://cybernews.com/security/eu-age-verification-app-hack/
+
+Steam Controller announced at 99USD
+https://store.steampowered.com/sale/steamcontroller
+https://www.techradar.com/computing/peripherals-accessories/valve-steam-controller-2026
+https://www.gamingonlinux.com/2026/04/valve-have-plans-for-the-steam-deck-2-plus-a-brief-steam-machine-steam-frame-update/
+
+Anthropic now funds Blender
+https://www.blender.org/press/anthropic-joins-the-blender-development-fund-as-corporate-patron/
+https://www.anthropic.com/news/claude-for-creative-work
+https://www.gamingonlinux.com/2026/05/blender-change-the-anthropic-ai-funding-deal-with-discussions-planned-for-ai-policies/
+
+Fedora 44 released
+https://fedoramagazine.org/announcing-fedora-linux-44/
+https://fedoramagazine.org/whats-new-in-fedora-kde-plasma-desktop-44/
+https://fedoramagazine.org/fedora-asahi-remix-44-is-now-available/
+
+New campaign fighting back against Android lockdown
+https://keepandroidopen.org/en/
+
+#linuxdesktop #linuxdistro #linuxnews

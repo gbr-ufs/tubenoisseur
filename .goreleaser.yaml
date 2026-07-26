@@ -1,0 +1,124 @@
+# SPDX-FileCopyrightText: 2026 Gabriel Santos de Souza <gabriel.santosdesouza@dcomp.ufs.br>
+#
+# SPDX-License-Identifier: GPL-3.0-or-later
+
+# yaml-language-server: $schema=https://goreleaser.com/static/schema.json
+# vim: set ts=2 sw=2 tw=0 fo=cnqoj
+
+archives:
+  - files:
+    - src: completions/*
+      dst: completions/
+    formats: [tar.gz]
+    format_overrides:
+      - goos: windows
+        formats: [zip]
+    name_template: >-
+      {{.ProjectName}}_
+      {{- title .Os}}_
+      {{- if eq .Arch "amd64"}}x86_64
+      {{- else}}{{.Arch}}{{end}}
+      {{- if .Arm}}v{{.Arm}}{{end}}
+aur_sources:
+  - private_key: "{{.Env.AUR_KEY}}"
+before:
+  hooks:
+    - mkdir -p completions
+    - go run . completion bash > completions/bash
+    - go run . completion fish > completions/fish
+    - go run . completion powershell > completions/powershell
+    - go run . completion zsh > completions/zsh
+builds:
+  - main: ./...
+    env:
+      - CGO_ENABLED=0
+    goos:
+      - linux
+      - windows
+      - darwin
+    goarch:
+      - amd64
+      - arm64
+changelog:
+  filters:
+    exclude:
+      - "^docs:"
+      - "^test:"
+  sort: asc
+dockers_v2:
+  - annotations:
+      "org.opencontainers.image.description": "YouTuber Reference Scraper."
+    dockerfile: Dockerfile
+    images:
+      - "ghcr.io/gbr-ufs/tubenoisseur"
+    labels:
+      org.opencontainers.image.created: "{{.Date}}"
+      org.opencontainers.image.name: "{{.ProjectName}}"
+      org.opencontainers.image.revision: "{{.FullCommit}}"
+      org.opencontainers.image.version: "{{.Version}}"
+      org.opencontainers.image.source: "{{.GitURL}}"
+      org.opencontainers.image.description: "YouTuber Reference Scraper."
+    platforms:
+      - linux/amd64
+      - linux/arm64
+    tags:
+      - latest
+      - "{{.Tag}}"
+homebrew_casks:
+  - completions:
+      bash: completions/bash
+      fish: completions/fish
+      zsh: completions/zsh
+    repository:
+      name: homebrew-tap
+      owner: gbr-ufs
+      token: "{{ .Env.HOMEBREW_CASK_TOKEN }}"
+nfpms:
+  - contents:
+      - src: ./completions/bash
+        dst: /usr/share/bash-completion/completions/tubenoisseur
+      - src: ./completions/fish
+        dst: /usr/share/fish/vendor_completions.d/tubenoisseur.fish
+      - src: ./completions/zsh
+        dst: /usr/share/zsh/vendor-completions/_tubenoisseur
+    description: YouTuber Reference Scraper.
+    formats:
+    - apk
+    - deb
+    - rpm
+    homepage: https://gbr-ufs.github.io/tubenoisseur/
+    license: GPL
+    maintainer: Gabriel Santos de Souza <gabriel.santosdesouza@dcomp.ufs.br>
+nix:
+  - formatter: nixfmt
+    repository:
+      name: nur
+      owner: gbr-ufs
+      token: "{{ .Env.NUR_TOKEN }}"
+release:
+  footer: >-
+
+    ---
+
+    Released by [GoReleaser](https://github.com/goreleaser/goreleaser).
+scoops:
+  - repository:
+      name: scoops
+      owner: gbr-ufs
+      token: "{{ .Env.SCOOP_TOKEN }}"
+winget:
+  - installation_notes: https://gbr-ufs.github.io/tubenoisseur/getting_started
+    license_url: https://gbr-ufs.github.io/tubenoisseur/references/license
+    publisher: Gabriel Santos de Souza <gabriel.santosdesouza@dcomp.ufs.br>
+    release_notes_url: "https://github.com/gbr-ufs/tubenoisseur/releases/tag/{{.Tag}}"
+    publisher_url: https://gbr-ufs.github.io/tubenoisseur/
+    repository:
+      branch: tubenoisseur
+      name: winget-pkgs
+      owner: gbr-ufs
+      token: "{{ .Env.WINGET_TOKEN }}"
+    short_description: YouTuber Reference Scraper.
+    tags:
+      - cli
+      - youtube
+version: 2

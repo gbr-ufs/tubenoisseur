@@ -1,0 +1,36 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<feed xmlns:yt="http://www.youtube.com/xml/schemas/2015" xmlns:media="http://search.yahoo.com/mrss/" xmlns="http://www.w3.org/2005/Atom">
+ <link rel="self" href="http://www.youtube.com/feeds/videos.xml?channel_id=UC5UAwBUum7CPN5buc-_N1Fw"/>
+ <id>yt:channel:5UAwBUum7CPN5buc-_N1Fw</id>
+ <yt:channelId>5UAwBUum7CPN5buc-_N1Fw</yt:channelId>
+ <title>The Linux Experiment</title>
+ <link rel="alternate" href="https://www.youtube.com/channel/UC5UAwBUum7CPN5buc-_N1Fw"/>
+ <author>
+  <name>The Linux Experiment</name>
+  <uri>https://www.youtube.com/channel/UC5UAwBUum7CPN5buc-_N1Fw</uri>
+ </author>
+ <published>2018-02-21T14:20:56+00:00</published>
+ <entry>
+  <id>yt:video:upOaSBo5ygU</id>
+  <yt:videoId>upOaSBo5ygU</yt:videoId>
+  <yt:channelId>UC5UAwBUum7CPN5buc-_N1Fw</yt:channelId>
+  <title>Ubuntu under attack, Big flaw affects all Linux distros, Linux beats Windows - Linux Weekly News</title>
+  <link rel="alternate" href="https://www.youtube.com/watch?v=upOaSBo5ygU"/>
+  <author>
+   <name>The Linux Experiment</name>
+   <uri>https://www.youtube.com/channel/UC5UAwBUum7CPN5buc-_N1Fw</uri>
+  </author>
+  <published>2026-05-02T09:46:06+00:00</published>
+  <updated>2026-05-03T07:46:39+00:00</updated>
+  <media:group>
+   <media:title>Ubuntu under attack, Big flaw affects all Linux distros, Linux beats Windows - Linux Weekly News</media:title>
+   <media:content url="https://www.youtube.com/v/upOaSBo5ygU?version=3" type="application/x-shockwave-flash" width="640" height="390"/>
+   <media:thumbnail url="https://i2.ytimg.com/vi/upOaSBo5ygU/hqdefault.jpg" width="480" height="360"/>
+   <media:description></media:description>
+   <media:community>
+    <media:starRating count="4122" average="5.00" min="1" max="5"/>
+    <media:statistics views="75265"/>
+   </media:community>
+  </media:group>
+ </entry>
+</feed>

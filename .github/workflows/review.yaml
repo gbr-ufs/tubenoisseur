@@ -1,0 +1,56 @@
+# SPDX-FileCopyrightText: 2026 Gabriel Santos de Souza <gabriel.santosdesouza@dcomp.ufs.br>
+#
+# SPDX-License-Identifier: GPL-3.0-or-later
+
+name: Review
+
+on:
+  pull_request:
+    branches:
+      - main
+jobs:
+  check:
+    runs-on: ubuntu-latest
+    steps:
+    - name: Check Out Repository
+      uses: actions/checkout@11bd71901bbe5b1630ceea73d27597364c9af683
+      with:
+        fetch-depth: 0
+    - name: Install Nix
+      uses: NixOS/nix-installer-action@6b8548fe06acfb0155a50ab5d561accb215764cc
+      with:
+        extra-conf: |
+          experimental-features = nix-command flakes
+    - name: Cocogitto Check
+      run: |
+        nix develop ./nix --command \
+        cog check --from-latest-tag
+    - name: GoReleaser Check
+      run: |
+        nix develop ./nix --command \
+        goreleaser check
+    - name: REUSE Check
+      run: |
+        nix develop ./nix --command \
+        reuse lint
+  test:
+    needs: check
+    strategy:
+      matrix:
+        os:
+          - macos-latest
+          - ubuntu-latest
+          - windows-latest
+    runs-on: ${{ matrix.os }}
+    steps:
+    - name: Check Out Repository
+      uses: actions/checkout@11bd71901bbe5b1630ceea73d27597364c9af683
+    - name: Set Up Go
+      uses: actions/setup-go@4a3601121dd01d1626a1e23e37211e3254c1c06c
+      with:
+        cache: true
+        go-version: 1.26.2
+    - name: Test
+      run: go test work -coverprofile=coverage.txt -covermode=atomic
+    - name: Codecov Coverage
+      uses: codecov/codecov-action@671740ac38dd9b0130fbe1cec585b89eea48d3de

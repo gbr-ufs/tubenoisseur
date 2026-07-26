@@ -1,0 +1,4 @@
+"Z" is not a valid hex digit. Despite that, xurls finds this URL.
+
+Good URL: https://example.com/path%20/good
+Bad URL: https://example.com/path%ZZ/bad

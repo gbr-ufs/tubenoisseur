@@ -1,0 +1,24 @@
+{
+  "channelHandle": "ArjanCodes",
+  "domainCounts": {
+    "git.arjan.codes": 1
+  },
+  "excludedDomains": [
+    "arjan.codes",
+    "www.arjancodes.com",
+    "discord.arjan.codes",
+    "amzn.to"
+  ],
+  "lastVideoID": "rZpwFN_n2-g",
+  "videos": [
+    {
+      "description": "",
+      "ID": "rZpwFN_n2-g",
+      "published": "2026-05-01T15:01:33+00:00",
+      "title": "Your API Can’t Handle Real-World Integrations",
+      "urls": [
+        "https://git.arjan.codes/2026/apidata"
+      ]
+    }
+  ]
+}

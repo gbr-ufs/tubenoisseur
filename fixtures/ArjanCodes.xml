@@ -1,0 +1,36 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<feed xmlns:yt="http://www.youtube.com/xml/schemas/2015" xmlns:media="http://search.yahoo.com/mrss/" xmlns="http://www.w3.org/2005/Atom">
+ <link rel="self" href="http://www.youtube.com/feeds/videos.xml?channel_id=UCVhQ2NnY5Rskt6UjCUkJ_DA"/>
+ <id>yt:channel:VhQ2NnY5Rskt6UjCUkJ_DA</id>
+ <yt:channelId>VhQ2NnY5Rskt6UjCUkJ_DA</yt:channelId>
+ <title>ArjanCodes</title>
+ <link rel="alternate" href="https://www.youtube.com/channel/UCVhQ2NnY5Rskt6UjCUkJ_DA"/>
+ <author>
+  <name>ArjanCodes</name>
+  <uri>https://www.youtube.com/channel/UCVhQ2NnY5Rskt6UjCUkJ_DA</uri>
+ </author>
+ <published>2017-01-01T14:50:41+00:00</published>
+ <entry>
+  <id>yt:video:rZpwFN_n2-g</id>
+  <yt:videoId>rZpwFN_n2-g</yt:videoId>
+  <yt:channelId>UCVhQ2NnY5Rskt6UjCUkJ_DA</yt:channelId>
+  <title>Your API Can’t Handle Real-World Integrations</title>
+  <link rel="alternate" href="https://www.youtube.com/watch?v=rZpwFN_n2-g"/>
+  <author>
+   <name>ArjanCodes</name>
+   <uri>https://www.youtube.com/channel/UCVhQ2NnY5Rskt6UjCUkJ_DA</uri>
+  </author>
+  <published>2026-05-01T15:01:33+00:00</published>
+  <updated>2026-05-01T16:05:20+00:00</updated>
+  <media:group>
+   <media:title>Your API Can’t Handle Real-World Integrations</media:title>
+   <media:content url="https://www.youtube.com/v/rZpwFN_n2-g?version=3" type="application/x-shockwave-flash" width="640" height="390"/>
+   <media:thumbnail url="https://i3.ytimg.com/vi/rZpwFN_n2-g/hqdefault.jpg" width="480" height="360"/>
+   <media:description></media:description>
+   <media:community>
+    <media:starRating count="832" average="5.00" min="1" max="5"/>
+    <media:statistics views="18807"/>
+   </media:community>
+  </media:group>
+ </entry>
+</feed>

@@ -1,0 +1,14 @@
+# SPDX-FileCopyrightText: 2026 Gabriel Santos de Souza <gabriel.santosdesouza@dcomp.ufs.br>
+#
+# SPDX-License-Identifier: CC-BY-4.0
+
+baseURL = 'https://gbr-ufs.github.io/tubenoisseur/'
+locale = 'en-us'
+title = 'tubenoisseur'
+[markup]
+[markup.goldmark]
+[markup.goldmark.renderer]
+  unsafe = true
+[module]
+[[module.imports]]
+  path = 'github.com/alex-shpak/hugo-book'
