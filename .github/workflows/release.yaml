@@ -42,10 +42,6 @@ jobs:
     - name: GoReleaser
       run: |
         nix develop ./nix --command \
-        # Goreleaser doesn't really interact well with "~" or environment
-        # variables.
-        mkdir -p ~/.ssh
-        ssh-keyscan aur.archlinux.org >> ~/.ssh/known_hosts
         goreleaser release
       env:
         GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}

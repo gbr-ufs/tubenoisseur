@@ -19,15 +19,20 @@ archives:
       {{- if eq .Arch "amd64"}}x86_64
       {{- else}}{{.Arch}}{{end}}
       {{- if .Arm}}v{{.Arm}}{{end}}
-aur_sources:
-  - private_key: "{{.Env.AUR_KEY}}"
+aurs:
+  - description: "YouTuber Reference Scraper."
+    homepage: https://gbr-ufs.github.io/tubenoisseur/
+    license: GPL
+    private_key: "{{.Env.AUR_KEY}}"
 before:
   hooks:
-    - mkdir -p completions
-    - go run . completion bash > completions/bash
-    - go run . completion fish > completions/fish
-    - go run . completion powershell > completions/powershell
-    - go run . completion zsh > completions/zsh
+    - sh -c 'mkdir -p ~/.ssh'
+    - sh -c 'ssh-keyscan aur.archlinux.org > ~/.ssh/known_hosts'
+    - sh -c 'mkdir -p completions'
+    - sh -c 'go run . completion bash > completions/bash'
+    - sh -c 'go run . completion fish > completions/fish'
+    - sh -c 'go run . completion powershell > completions/powershell'
+    - sh -c 'go run . completion zsh > completions/zsh'
 builds:
   - main: ./...
     env:
@@ -75,11 +80,11 @@ homebrew_casks:
       token: "{{ .Env.HOMEBREW_CASK_TOKEN }}"
 nfpms:
   - contents:
-      - src: ./completions/bash
+      - src: completions/bash
         dst: /usr/share/bash-completion/completions/tubenoisseur
-      - src: ./completions/fish
+      - src: completions/fish
         dst: /usr/share/fish/vendor_completions.d/tubenoisseur.fish
-      - src: ./completions/zsh
+      - src: completions/zsh
         dst: /usr/share/zsh/vendor-completions/_tubenoisseur
     description: YouTuber Reference Scraper.
     formats:
