@@ -4,6 +4,8 @@ SPDX-FileCopyrightText: 2026 Gabriel Santos de Souza <gabriel.santosdesouza@dcom
 SPDX-License-Identifier: CC-BY-4.0
 -->
 
+![Relaxed Go Gopher floating in a giant wineglass](./img/gopher.png)
+
 # [tubenoisseur: YouTuber Reference Scraper](https://gbr-ufs.github.io/tubenoisseur/)
 
 [![Codecov](https://codecov.io/gh/gbr-ufs/tubenoisseur/graph/badge.svg?token=RZBZBQG5PN)](https://codecov.io/gh/gbr-ufs/tubenoisseur)
