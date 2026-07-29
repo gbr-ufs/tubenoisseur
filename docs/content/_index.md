@@ -5,7 +5,7 @@ title: tubenoisseur
 type: docs
 ---
 
-![Relaxed Go Gopher floating in a giant wineglass](img/gopher.png)
+![Relaxed Go Gopher floating in a giant wineglass](gopher.png)
 
 # [tubenoisseur: YouTuber Reference Scraper](https://gbr-ufs.github.io/tubenoisseur/)
 
