@@ -43,7 +43,7 @@ jobs:
       id: cache
       uses: actions/cache@640a1c2554105b57832a23eea0b4672fc7a790d5 # Remember to update this!
       with:
-        key: ${{ runner.os }}-go-tubenoisseur-v1.0.4 # Remember to update this!
+        key: ${{ runner.os }}-go-tubenoisseur-v1.0.0 # Remember to update this!
         path: ~/go/bin/tubenoisseur
     - name: Add Go Binary Directory to $PATH
       if: ${{ steps.cache.outputs.cache-hit == 'true' }}
@@ -55,7 +55,7 @@ jobs:
         go-version: 1.26.5
     - name: Install Tubenoisseur
       if: ${{ steps.cache.outputs.cache-hit != 'true' }}
-      run: go install github.com/gbr-ufs/tubenoisseur@v1.0.4 # Remember to update this!
+      run: go install github.com/gbr-ufs/tubenoisseur@v1.0.0 # Remember to update this!
     - name: Tubenoisseur
       run: tubenoisseur ${{ matrix.channel }} --debug
       env:
